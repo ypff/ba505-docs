@@ -22,7 +22,7 @@ https://classroom.github.com/a/AoepiXrE
 Then clone your copy to your desktop and open in JupyterLab. 
 1. __Take a few minutes to read about the [Waist to Hip Ratio](https://en.wikipedia.org/wiki/Waist%E2%80%93hip_ratio).__ You should understand it well enough to explain it to your parents and walk them through doing the analysis on themselves.
 2. __Open the file `w2h_data.csv` and study the data in it, which is organized as a table in *comma separated value* (or CSV) format.__ A CSV file has data in rows and columns. Each line has the same columns in the same order, with each column separated from the next by a comma.  The first line has the column names (a.k.a. headings). The second line has the first row of data, with the next row below it, etc.  *We are going to use Jupyter to write a short report on Waist to Hip Ratios using examples from the `w2h_data.csv` file.*   
-3. __Launch Jupyter from Anaconda and open the file `HealthStatsPart1.ipynb` from within this repository.__ All the notebook cells are already provided, with comments used to provide instructions. Try to read through the code and make sense of what each section of the notebook is about.
+3. __Launch Jupyter from Anaconda and open the file `Part1.ipynb` from within this repository.__ All the notebook cells are already provided, with comments used to provide instructions. Try to read through the code and make sense of what each section of the notebook is about.
 4. __Edit the Markdown cells with "EDIT THIS MARKDOWN CELL".__ Instructions are given in the HTML-style comments inside each cell. *You will find links to Markdown references in JupyterLab's Help menu.* 
 5. __Read through the code cells, looking for "FIX THIS" comments indicating where you need to correct the code.__ For each, write the correct code, first making sure you understand what is required.
 6. __Check your work by comparing with your peers.__ Just take care that your classmates may have also gotten the code wrong.
@@ -59,7 +59,7 @@ Then clone your copy to your desktop and open in JupyterLab.
 4. __Modify the scrubbing code so that each row is stored as a dictionary instead of a list.__ The dictionary keys should be 'ID', 'Waist', 'Hip', and 'Gender'. The `rows` variable should have a *list of dictionaries* instead of a list of lists.
 5. __In the Calculations section (a few cells down), modify the Python code so that it uses your the new dictionaries (instead of lists).__ You will need to know how to add the two new (key,value) pairs to each dictionary.
 6. __Modify the Output section to use dictionaries instead of lists.__ You saw this coming, right?
-7. __Now for a real challenge: Use Python to write the HTML table to a file called `StatsResults.html`.__ If you did this correctly, you should be able to open the file in a web browser and see the HTML table without Jupyter.
+7. __(Optional) Now for a real challenge: Use Python to write the HTML table to a file called `StatsResults.html`.__ If you did this correctly, you should be able to open the file in a web browser and see the HTML table without Jupyter.
 8. __Commit and sync your work to GitHub.__ For the commit summary comment use "Completed Part 2." 
 
 # Part 3: NumPy Structured Arrays
@@ -74,7 +74,7 @@ Then clone your copy to your desktop and open in JupyterLab.
 
 ## Instructions
 1. __Open the `Part3.ipynb` file in Jupyter.__ The file already has the corrected Python code from the last class. As before, fill in the first couple Markdown cells as asked. Yoiu can copy from previous versions if you like.
-2. __Scroll down (and run) to the cell that starts with `# Goal: Extract the data from the file`__ Use NumPy's `genfromtxt()` function to read the file into the rows variable. You will need to supply a `dtype` that specifies the column names and data types. 
+2. __Scroll down (and run) to the cell that starts with `# Goal: Extract the data from the file`__ Import Numpy and then use NumPy's `genfromtxt()` function to read the file into the rows variable. You will need to supply a `dtype` that specifies the column names and data types. 
 4. __Delete the cell that starts with `# Goal: Scrub and convert the data`.__ We don't need it anymore!  
 5. __Scroll down to the cell that starts with `# Goal: for each row ...`__ Use NumPy to calculate arrays of waist-to-hip ratios and shape codes. (Use NumPy's element-wise operations for both of these. You should no longer need a for loop.) Then add columns to your rows array with the new data. Don't forget to do update the `dtype` for the array to include the new columns.  
 6. __Use Python to write the results to disk.__ As before, write the data to an HTML table to a file called `StatsResults.html`. Then use NumPy's `savetxt()` function to write it to a CSV file called `StatsResults.csv`.
@@ -92,8 +92,8 @@ Then clone your copy to your desktop and open in JupyterLab.
 
 ## Instructions
 1. __Open the `Part4.ipynb` file in Jupyter.__ The file already has the corrected Python code from class. Insert the missing markdown at the top as usual.
-2. __Use Pandas's I/O functions to import the raw data from the CSV file.__ Make sure to use `dtype`s to name and type the columns while reading the file.
-3. __For the calculations step, have NumPy use the data in the DataFrame.__ We covered several ways to get a NumPy array from Pandas in class. Store the new data in two new columns, without creating a DataFrame.
+2. __Use Pandas's I/O functions to import the raw data from the CSV file.__ Make sure to use `dtype`s to name and type the columns while reading the file. (Note: you will have to import pandas betfore using it.)
+3. __For the calculations step, have NumPy use the data in the DataFrame.__ We covered several ways to get a NumPy array from Pandas in class. Store the new data in two new columns, without creating a DataFrame. You can also play with different selection techniques provided by pandas to cut out lines of code.
 4. __Use DataFrame's I/O functions to present your results.__ Render the HTML for Jupyter and export to the CSV file `StatsResults.csv`.
 5. __Commit and sync your work to GitHub.__ For the commit summary comment use "Completed Part 4." 
 6. __Take a moment to assess.__  Compare your code to where we started in Part 1:  
@@ -116,10 +116,10 @@ Then clone your copy to your desktop and open in JupyterLab.
 * Use Matplotlib to plot key statistics
 
 ## Instructions
-0. __Form a team of 2-3 people.__ Each team must have at least 2 people and no more than 3 people. Choose wisely as this is your tryout for the final projects. You will share a Git repo with your teammates through GitHub Classroom. The rest of the instructions assume that you are using `git pull`, `git commit` and `git push` continually to keep all of your copies in sync with your teammates. You may also want to keep personal "scrap" copies of your notebooks that you will assemble together at the end. That way you won't have to deal with multiple people editing the same file at once. (If you are really adventurous then you'll create separate git branches for each team member  and use git to merge them together on the master branch.)  
-1. __Study the `ehresp_2-15.csv` and `EHResp2015.info.txt` files.__ The data was collected by the US Department of labor and includes various health stats from many thousands of people. Based on what you know, come up with 3 interesting research questions that you would like to test with the data.
-2. __In your shared Git Repo, create a new Notebook called `EH_Study_2015.ipynb` in the same folder as your new data.__ Outline your study, including details like where the data came from, the key columns in the dataset, and what research questions you intend to study. Include the next step as a fourth research question.
-3. __Load your data.__ Use a Pandas DataFrame called `source_data` with appropriate column names, data types,  and numerical indexes. Take care to ensure that your data loaded correctly before proceeding. You may want to keep your results separate from your source data, perhaps in a new DataFrame called `results`.
+0. __Form a team of 2-3 people.__ Each team must have at least 2 people and no more than 3 people. Choose wisely as this is your tryout for the final projects. You will share a Git repo with your teammates through GitHub Classroom. **(A link is given on the class agenda.)** The rest of the instructions assume that you are using `git pull`, `git commit` and `git push` continually to keep all of your copies in sync with your teammates. You may also want to keep personal "scrap" copies of your notebooks that you will assemble together at the end. That way you won't have to deal with multiple people editing the same file at once. (If you are really adventurous then you'll create separate git branches for each team member  and use git to merge them together on the master branch.)
+1. __(ONE STUDENT PER TEAM) Copy the `ehresp_2-15.csv` and `EHResp2015.info.txt` files into your repository. Then commit and sync the repo with your teammates.__ The data was collected by the US Department of labor and includes various health stats from many thousands of people. Based on what you know, come up with 3 interesting research questions that you would like to test with the data. Study it to see what's inside.
+2. __(ONE STUDENT PER TEAM) In your shared Git repo, create a new Notebook called `EH_Study_2015.ipynb` in the same folder as your new data.__ Outline your study, including details like where the data came from, the key columns in the dataset, and what research questions you intend to study. Include the next step as a fourth research question. Commit and sync with your teammates. 
+3. __Load your data.__ Use a pandas DataFrame called `source_data` with appropriate column names, data types,  and numerical indexes. Take care to ensure that your data loaded correctly before proceeding. You may want to keep your results separate from your source data, perhaps in a new DataFrame called `results`.
 4. __Do an analysis of Body Mass Index data, comparing males with females.__ You will need to (re-)calculate BMI for each person and then display histograms segmented by one of the other attributes (income, exercise, soda consumption). If you can figure out how, display two histograms (one per segment) on one plot.
 5. __Perform the rest of your analysis.__ Show your calculations and use plots to illustrate your results.
-6. __Present your results in class.__ We will do this in the next class period.
+6. __Present your results.__ We will do this in the next class period.

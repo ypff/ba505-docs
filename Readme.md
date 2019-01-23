@@ -4,6 +4,7 @@ _Fall 2018_
 * [Syllabus](Syllabus.md)
 * [Agendas](Agenda)
 * [Lectures](Slides)
+* [Tutorials](Tutorials)
 * [Downloads](Downloads)
 * Final Project (TBA)
 

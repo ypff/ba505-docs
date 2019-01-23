@@ -2,3 +2,8 @@
 * [L1 Preliminaries](L1_Python_Preliminaries.slides.html)
 * [L2 Python Essentials](L2_Python_Essentials.slides.html)
 * [L3 Static Structure and Flow Control](L3_Static_Structure_and_Flow_Control.slides.html)
+* [L4 Data Structures and Files](L4_Data_Structures_and_Files.slides.html)
+* [L5 NumPy](L5_NumPy_Arrays.slides.html)
+* [L6 pandas](L6_Pandas_DataFrames.slides.html)
+* [L7 Using pandas and NumPy](L7_Using_Pandas_and_Numpy.slides.html)
+* [L8 Matplotlib](L8_Matplotlib.slides.html)
